@@ -1,9 +1,12 @@
 import React from 'react';
-
-// Este componente recibe un prop desestructurado con un valor por default
-const PrimeraApp = ({ saludo = "Hola Mundo" }) => {
+import PropTypes from 'prop-types';
 
 
+const PrimeraApp = ({ saludo }) => {
+
+    // if( !saludo){
+    //     throw new Error('El saludo es necesario');
+    // }
     return (
         <>
             {/* <pre>{ JSON.stringify (persona, null, 3)}</pre> */}
@@ -14,5 +17,8 @@ const PrimeraApp = ({ saludo = "Hola Mundo" }) => {
 
 }
 
+PrimeraApp.propTypes = {
+    saludo: PropTypes.string.isRequired
+}
 
 export default PrimeraApp;
