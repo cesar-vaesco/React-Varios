@@ -3,9 +3,19 @@ import React from 'react';
 
 const PrimeraApp = () => {
 
+    const saludo = 'Hola Mundo';
+    // const saludo = 123;
+    // const saludo = 133.5;
+    // const saludo = true;
+    const persona = {
+        nombre: 'Cesar',
+        edad:41
+    };
+
     return (
         <>
-            <h1>Hola Mundo</h1>
+            <pre>{ JSON.stringify (persona, null, 3)}</pre>
+            <h1>{ saludo }</h1>
             <p>Mi primer Aplicación</p>
         </>
     );
