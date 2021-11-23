@@ -1,18 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 const CounterApp = ({ value }) => {
 
-    //HandleAdd
-    const handleAdd = (e) => {
-        console.log(e);
 
+    const [counter, setCounter] = useState(0);// El use state retormna un arreglo con dos valores
+
+
+    //HandleAdd
+    const handleAdd = () => {
+        // Dos maneras de manejar sel set counter
+        setCounter(counter + 1);
+        // setCounter((c) => c + 1);
     }
 
     return (
         <>
             <h1>CounterApp</h1>
-            <h2> {value} </h2>
+            <h2> {counter} </h2>
 
             <button onClick={
                 handleAdd
