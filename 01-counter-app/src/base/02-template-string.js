@@ -1,8 +1,8 @@
 
 
 
-const nombre   = 'Fernando';
-const apellido = 'Herrera';
+const nombre   = 'César!';
+const apellido = 'Vargas';
 
 
 // const nombreCompleto = nombre + ' ' + apellido;
@@ -11,8 +11,8 @@ const nombreCompleto = `${ nombre } ${ apellido }`;
 console.log( nombreCompleto );
 
 
-function getSaludo(nombre) {
-    return 'Hola ' + nombre;
+export function getSaludo(nombre = 'Veronica') {
+    return 'Hola ' + nombre +'!';
 }
 
 console.log( `Este es un texto: ${ getSaludo( nombre ) }  ` );
