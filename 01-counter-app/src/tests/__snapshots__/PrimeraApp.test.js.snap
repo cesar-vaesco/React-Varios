@@ -6,7 +6,9 @@ exports[`Pruebas en PrimeraApp Debe de mostrer <PrimeraApp/> correctamente 1`] =
     Hola, Soy Goku
   </h1>
   <h2>
+     
     Soy un subtitulo
+     
   </h2>
   <p>
     Mi primer Aplicación
