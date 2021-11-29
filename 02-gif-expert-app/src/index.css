@@ -7,6 +7,12 @@ body {
 }
 
 
-h2{
+h2 {
     font-size: 2.5em;
+}
+
+input {
+    color: grey;
+    font-size: 1.2em;
+    width: 100%;
 }
