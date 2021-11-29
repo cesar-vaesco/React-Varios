@@ -1,12 +1,12 @@
 
 import React from 'react';
 import { useState } from 'react/cjs/react.development';
-import { AddCategoria } from './components/AddCategoria';
+import { AddCategorie } from './components/AddCategory';
 
 
 export const GifExpertApp = () => {
 
-    const [categorias, setcategorias] = useState(['One Punch', 'Gragon Ball', 'Naruto']);
+    const [categories, setCategories] = useState(['One Punch', 'Samurai X', 'Dragon Ball']);
 
     // const handleAdd = () => {
     //     ///setcategorias(['HunterXHunter', ...categorias]);
@@ -17,12 +17,12 @@ export const GifExpertApp = () => {
     return (
         <>
             <h2>GifExpertApp</h2>
-            <AddCategoria/>
+            <AddCategorie setCategories={setCategories}/>
             <hr />
             <ol>
                 {
-                    categorias.map(categoria => {
-                        return <li key={categoria}>{categoria}</li>
+                    categories.map(categorie => {
+                        return <li key={categorie}>{categorie}</li>
                         //return <li>Hola</li>
                     })
                 }
