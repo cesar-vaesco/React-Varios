@@ -15,14 +15,14 @@ export const GifGrid = ({ category }) => {
 
         const url = 'https://api.giphy.com/v1/gifs/search?q=One+Punch&limit=10&api_key=7lB878Nhu3ZkNDikahV5dr03vHbNXJkU';
 
-        const resp = await fetch( url );
+        const resp = await fetch(url);
 
         const { data } = await resp.json();
 
 
 
 
-        const gifs = data.map( img => {
+        const gifs = data.map(img => {
             return {
                 id: img.id,
                 title: img.title,
@@ -32,8 +32,8 @@ export const GifGrid = ({ category }) => {
 
 
 
-        console.log( gifs );
-        setImages( gifs );
+        console.log(gifs);
+        setImages(gifs);
 
 
     };
@@ -45,18 +45,21 @@ export const GifGrid = ({ category }) => {
     //getGifs();
 
     return (
-        <div>
+        <>
             <h3>{ category }</h3>
 
-                {
-                    images.map( ( img )=>
-                         <GifGridItem
-                            key = { img.id }
-                             {...img }
-                        />
-                    )
-                }
+            <div className="card-grid">
 
-        </div>
+                    {
+                        images.map( ( img )=>
+                        <GifGridItem
+                        key = { img.id }
+                        {...img }
+                        />
+                        )
+                    }
+
+            </div>
+        </>
     )
 }
