@@ -49,3 +49,11 @@ input:focus {
     max-height: 150px;
     width: 100%;
 }
+
+.animate__animated.animate__flash {
+    --animate-duration: 2.5s;
+}
+
+.animate__animated.animate__tada {
+    --animate-duration: 2.5s;
+}

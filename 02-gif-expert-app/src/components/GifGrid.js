@@ -10,7 +10,7 @@ export const GifGrid = ({ category }) => {
 
     const { data:images, loading } = useFetchGifs( category );
 
-    console.log({ loading });
+    //console.log({ loading });
 
 
 
@@ -18,9 +18,9 @@ export const GifGrid = ({ category }) => {
 
     return (
         <>
-            <h3>{ category }</h3>
+            <h3 className="animate__animated animate__tada"> { category }</h3>
 
-            { loading && <p> Loading... </p>}
+            {loading && <p> Loading... </p>}
 
             <div className="card-grid">
 
